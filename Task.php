@@ -39,4 +39,11 @@ class Task
         
         return $data;
     }
+    public function limpar()
+    {
+        $query = "DELETE FROM tasks";
+        $sql = $this->pdo->prepare($query);
+        $sql->execute();
+
+    }
 }

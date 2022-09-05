@@ -14,6 +14,7 @@ $data = $task->tarefa();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <title>GerenciadorTarefas</title>
 </head>
@@ -38,12 +39,12 @@ $data = $task->tarefa();
             <ul>
                 <?php foreach ($data as $item) : ?>
                     <li id="li-tarefa">
-                        <div><?= $item['tarefa'] ?></div>
+                        <div ><?= $item['tarefa'] ?></div>
                         <div class="date"><?= $item['date'] ?></div>
                     </li>
                 <?php endforeach ?>
             </ul>
-
+            <button class="button" ><a href="limpar.php">limpar</a></button>
         </div>
         <div class="footer">
             <p>Desenvolvido por @Kadimus</p>
@@ -61,3 +62,4 @@ $data = $task->tarefa();
 </body>
 
 </html>
+
