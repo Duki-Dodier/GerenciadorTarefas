@@ -1,3 +1,12 @@
+<?php
+require_once "config.php";
+
+require_once "Task.php";
+$task = new Task($pdo);
+$data = $task->tarefa();
+
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -15,7 +24,7 @@
             <h1>GerenciadorTarefas</h1>
         </div>
         <div class="form">
-            <form action="" method="GET">
+            <form action="task_actions.php" method="POST">
                 <label for="task_name">Tarefa:</label>
                 <input type="text" name="task_name" placeholder="Nome da Tarefa">
                 <button type="submit">Cadastrar</button>
@@ -27,10 +36,11 @@
         </div>
         <div class="list-tasks">
             <ul>
-                <li>tarefa</li>
-                <li>tarefa</li>
-                <li>tarefa</li>
+                <?php foreach($data as $item): ?>
+                    <li><?= $item['tarefa']?></li>
+                <?php endforeach ?>
             </ul>
+                    
         </div>
         <div class="footer">
             <p>Desenvolvido por @Kadimus</p>
