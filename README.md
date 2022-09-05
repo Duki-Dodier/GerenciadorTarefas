@@ -1,6 +1,6 @@
 # GerenciadorTarefas
 
-## Tecnologias
+## Tecnologias 🖥
 * **PHP**
 * **HTML**
 * **CSS**
