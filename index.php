@@ -36,15 +36,26 @@ $data = $task->tarefa();
         </div>
         <div class="list-tasks">
             <ul>
-                <?php foreach($data as $item): ?>
-                    <li><?= $item['tarefa']?></li>
+                <?php foreach ($data as $item) : ?>
+                    <li id="li-tarefa">
+                        <div><?= $item['tarefa'] ?></div>
+                        <div class="date"><?= $item['date'] ?></div>
+                    </li>
                 <?php endforeach ?>
             </ul>
-                    
+
         </div>
         <div class="footer">
             <p>Desenvolvido por @Kadimus</p>
         </div>
+
+        <?php if (!empty($_SESSION['message'])) : ?>
+            <div class="message">
+                <p><?= $_SESSION['message']; ?></p>
+            </div>
+            <?php $_SESSION['message'] = ''; ?>
+        <?php endif ?>
+
     </div>
 
 </body>

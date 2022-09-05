@@ -22,7 +22,6 @@ class Task
     $sql->bindValue(':date',$data);
     $sql->execute();
 
-    $_SESSION['sucesso'] = "Tarefa Cadastrada";
     header("Location: index.php");
     exit;
     }

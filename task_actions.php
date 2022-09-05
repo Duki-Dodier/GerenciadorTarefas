@@ -12,4 +12,8 @@ if(!empty($task_name))
     $task = new Task($pdo);
     $task->salvarTarefa($task_name);
     
+}else{
+    $_SESSION['message'] =  "Digite uma tarefa!";
+    header("Location: index.php");
+    exit;
 }
