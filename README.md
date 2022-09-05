@@ -1,5 +1,10 @@
 # GerenciadorTarefas
 
+## Tecnologias
+* **PHP**
+* **HTML**
+* **CSS**
+
 ## Desenvolver 📝
 
 - [x] aplicar __line-through__ 💡
